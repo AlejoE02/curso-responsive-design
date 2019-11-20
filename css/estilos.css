@@ -118,11 +118,15 @@ h2 {
 }
 
 .project-details{
-    width: 500px;
+    width: 50%;
 }
 
 .project-imageContainer{
-    width: 500px;
+    width: 50%;
+}
+
+.project-imageContainer img{
+    max-width: 100%;
 }
 
 .header{
@@ -212,9 +216,8 @@ figure{
  }
 
 .event {
-    /* border: 1px solid red; */
-    margin: 10px;
-    width: 480px;
+    margin: 1%;
+    width: 48%;
     border-radius: 10px;
     overflow: hidden;
     flex-shrink: 0;
@@ -312,6 +315,7 @@ figure{
 
 .container{
     max-width: 1000px;
+    flex: 1;
     margin: 0 auto;
     display: inherit;
     height: inherit;
@@ -319,18 +323,149 @@ figure{
     align-items: inherit;
     flex-wrap: inherit;
 }
-
-@media screen and(max-width: 1024px){
-    
+.html-video{
+    width: 100%;
+    height: auto;
+    /* max-width: 100%; */
 }
-@media screen and(max-width: 768px){
-    body{
-        /* border: 10px solid yellow; */
+
+.youtube-video{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.flexible-video{
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%;
+    background: blue;
+}
+
+@media screen and (max-width: 1024px){
+    .container{
+        padding: 0 1em;
+    }
+    .hero{
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        padding: 2em;
+    }
+    .hero-image{
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+    }
+    h1{
+        font-size: 2em;
+        z-index: 2;
     }
 }
-@media screen and(max-width: 480px){
+@media screen and (max-width: 767px){
 
+    .header{
+        display: block;
+        height: auto;
+    }
+    .header ol{
+        display: block;
+    }
+    .header ol li{
+        height: 50px;
+    }
+    .header a{
+        justify-content: center;
+    }
+    .header .logo{
+        text-align: center;
+    }
+    .project {
+        display: block;
+    }
+    .project-imageContainer{
+        width: auto;
+        text-align: center;
+    }
+    .project-details{
+        width: auto;
+        /* font-size: 16px; */
+    }
+    .project-course, .project-date, .project-url{
+        margin: .4em 0;
+        margin-bottom: .3em;
+    }
+    .project-title{
+        font-size: 1.5em;
+    }
+    .project-url{
+        font-size: 1em;
+    }
+    .project-course{
+        font-size: .7em;
+    }
+    .project-date{
+        font-size: 1em;
+    }
+    .project-description{
+        font-size: .8em;
+    }
+
+    .event{
+        width: auto;
+        flex-shrink: initial;
+    }
+    .event img{
+        width: 100%;
+    }
+
+}
+@media screen and (max-width: 480px){
+    h1{
+        font-size: 1.5em;
+    }
+    .project-details{
+        width: auto;
+        font-size: 12px;
+    }
+
+    .event-detail{
+        margin: -2em .5em .5em;
+        padding: 1em;
+    }
+
+    .contact{
+        height: auto;
+        padding: 1.5em 0;
+        text-align: center;
+        display: block;
+    }
+    .form-email button{
+        margin: 1em auto;
+    }
+    .form-email h3{
+        margin-top: 0;
+    }
+    .footer{
+        display: block;
+        text-align: center;
+        border: 1px solid transparent;
+    }
 }
 
 @media screen and (max-width: 320px){
+    h1{
+        font-size: 1.2em;
+    }
+    .hero{
+        padding: 2em 1em;
+    }
 }
